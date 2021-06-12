@@ -1,0 +1,28 @@
+.custom__navbar {
+    background-color: #343a406b!important;
+}
+.nav__links {
+    margin-left: 8vw;
+}
+.nav__links>a, .nav__linksRight>a {
+    color: white !important;
+    padding: 0 15px;
+}
+.mobile__toggelBtnWrapper{
+    display: none !important;
+}
+.mobile__toggelBtn{
+    color: white;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .nav__links{
+        display: none !important;
+    }
+    .mobile__toggelBtnWrapper{
+        display: block !important;
+    }
+    .custom__navbar {
+        background-color: #343a408a!important;
+    }
+  }
