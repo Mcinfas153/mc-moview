@@ -1,5 +1,6 @@
 .custom__navbar {
     background-color: #343a406b!important;
+    z-index: 1 !important;
 }
 .nav__links {
     margin-left: 8vw;

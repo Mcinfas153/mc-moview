@@ -1,7 +1,12 @@
 .slider {
-    position: absolute;
-    top: 0;
-    z-index: -1;
     max-height: 100vh !important;
     overflow: hidden;
+    margin-top: -58px;
+    z-index: -1;
+}
+a.carousel-control-prev {
+    display: none;
+}
+a.carousel-control-next {
+    display: none;
 }

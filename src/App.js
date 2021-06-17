@@ -5,6 +5,7 @@ import Login from './component/Login'
 import Register from './component/Register'
 import AddProduct from './component/AddProduct'
 import UpdateProduct from './component/UpdateProduct'
+import DarkMode from './component/DarkMode'
 import './App.css';
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
             <Route path="/update-movie">
               <UpdateProduct />
             </Route>
+            <DarkMode />
           </Route>
         </Switch>
       </Router>

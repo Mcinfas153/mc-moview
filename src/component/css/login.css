@@ -1,0 +1,14 @@
+.login {
+    margin-top: 15vh;
+}
+.login__boxWrapper {
+    padding: 40px 30px;
+}
+.login__title {
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+.register__btn>a{
+    color: white !important;
+}
