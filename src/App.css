@@ -10,7 +10,7 @@ body.light-mode {
 }
 body.dark-mode {
   background-color: #1a1919;
-  color: white !important;
+  color: rgb(95, 95, 95) !important;
 }
 
 .section__header {
