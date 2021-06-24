@@ -3,8 +3,8 @@ import Header from './component/Header'
 import Home from './component/Home'
 import Login from './component/Login'
 import Register from './component/Register'
-import AddProduct from './component/AddProduct'
-import UpdateProduct from './component/UpdateProduct'
+import AddMovie from './component/AddMovie'
+import UpdateMovie from './component/UpdateMovie'
 import DarkMode from './component/DarkMode'
 import './App.css';
 
@@ -14,21 +14,25 @@ function App() {
       <Router>
         <Switch>
           <Route path="/" component={App}>
-            <Header />
             <Route exact path="/">
+              <Header />
               <Home />
             </Route>
             <Route path="/login">
+              <Header navbar="bg-dark" />
               <Login />
             </Route>
             <Route path="/register">
+              <Header navbar="bg-dark" />
               <Register />
             </Route>
             <Route path="/add-movie">
-              <AddProduct />
+              <Header navbar="bg-dark" />
+              <AddMovie />
             </Route>
             <Route path="/update-movie">
-              <UpdateProduct />
+              <Header navbar="bg-dark" />
+              <UpdateMovie />
             </Route>
             <DarkMode />
           </Route>

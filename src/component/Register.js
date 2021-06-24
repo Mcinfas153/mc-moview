@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios';
 import { useHistory } from "react-router-dom";
@@ -33,7 +33,7 @@ export default function Register() {
     const schema = yup.object().shape({
         name: yup.string().required(),
         email: yup.string().email().required(),
-        password: yup.string().required(),
+        password: yup.string().required().min(8),
     });
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm({
@@ -66,6 +66,10 @@ export default function Register() {
             })
     }
 
+    useEffect(() => {
+        localStorage.getItem('user') && history.push('add-movie')
+    }, []);
+
     return (
         <div className="register">
             <BeatLoader loading={loading} size={20} css={override} color={color} />
@@ -76,17 +80,17 @@ export default function Register() {
                         <div className="form-group">
                             <input type="text" className="form-control" placeholder="Enter your name" {...register("name", { required: true })} />
                             {/* errors will return when field validation fails  */}
-                            <p>{errors.name?.message}</p>
+                            <p className="error__msg">{errors.name?.message}</p>
                         </div>
                         <div className="form-group">
                             <input type="email" className="form-control" placeholder="Enter your email" {...register("email", { required: true })} />
                             {/* errors will return when field validation fails  */}
-                            <p>{errors.email?.message}</p>
+                            <p className="error__msg">{errors.email?.message}</p>
                         </div>
                         <div className="form-group">
                             <input type="password" className="form-control" placeholder="Enter your password" {...register("password", { required: true })} />
                             {/* errors will return when field validation fails  */}
-                            <p>{errors.password?.message}</p>
+                            <p className="error__msg">{errors.password?.message}</p>
                         </div>
                         <input className="btn btn-success btn-block" type="submit" />
                     </form>
@@ -94,7 +98,7 @@ export default function Register() {
                 </div>
                 <div className="signup__wrapperBox text-center">
                     <p className="mt-3 text-dark">If you don't have an account, register here,</p>
-                    <div className="m-auto col-md-6 col-12">
+                    <div className="m-auto mb-5 col-md-6 col-12">
                         <Link to="/login"><button className="btn btn-primary btn-sm btn-block login__btn">Login</button></Link>
                     </div>
                 </div>

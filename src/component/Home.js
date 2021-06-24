@@ -2,7 +2,7 @@ import React from 'react'
 import Slider from './Slider'
 import Row from './Row'
 
-export default function Home() {
+export default function Home(props) {
     return (
         <div className="home">
             <Slider />

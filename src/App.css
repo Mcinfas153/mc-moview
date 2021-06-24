@@ -1,5 +1,8 @@
-mr-1{
+.mr-1{
     margin-right: 5px !important;
+}
+.mb-5{
+  margin-bottom: 25px !important;
 }
 
 /* ======================================== */
@@ -12,7 +15,10 @@ body.dark-mode {
   background-color: #1a1919;
   color: rgb(95, 95, 95) !important;
 }
-
+.error__msg {
+  color: red;
+  margin-left: 5px;
+}
 .section__header {
     font-size: 20px;
     text-transform: uppercase;

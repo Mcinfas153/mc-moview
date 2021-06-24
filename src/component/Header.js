@@ -5,7 +5,7 @@ import { IconButton } from '@material-ui/core';
 import { Close, Menu, Lock, PersonAdd } from '@material-ui/icons';
 import './css/header.css';
 
-export default function Header() {
+export default function Header(props) {
     const [open, setOpen] = useState(false);
 
     function handleDrawerOpen() {
@@ -28,7 +28,7 @@ export default function Header() {
 
     return (
         <div className="header">
-            <Navbar className="custom__navbar">
+            <Navbar className={`${props.navbar} custom__navbar`}>
                 <Navbar.Brand>
                     <Link to="/">
                         <img
@@ -41,14 +41,23 @@ export default function Header() {
                     </Link>
                 </Navbar.Brand>
                 <Nav className="nav__links">
-                    <Link to="/">Home</Link>
-                    <Link to="/add-movie">Add Movie</Link>
-                    <Link to="/update-movie">Update Movie</Link>
+                    {
+                        localStorage.getItem('user') &&
+                        <>
+                            <Link to="/add-movie">Add Movie</Link>
+                            <Link to="/update-movie">Update Movie</Link>
+                        </>
+                    }
                 </Nav>
                 <Nav.Item className="ml-auto">
                     <div className="nav__links">
-                        <Link to="/login"><Lock className="mr-1" />Login</Link>
-                        <Link to="/register"><PersonAdd className="mr-1" />Register</Link>
+                        {
+                            !localStorage.getItem('user') &&
+                            <>
+                                <Link to="/login"><Lock className="mr-1" />Login</Link>
+                                <Link to="/register"><PersonAdd className="mr-1" />Register</Link>
+                            </>
+                        }
                     </div>
                     <IconButton
                         color="inherit"
