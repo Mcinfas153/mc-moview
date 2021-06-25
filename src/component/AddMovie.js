@@ -11,7 +11,7 @@ export default function AddMovie() {
 
     return (
         <div>
-            <h1>Add Product Page</h1>
+            <h1>Add Movie Page</h1>
         </div>
     )
 }
