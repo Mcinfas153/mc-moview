@@ -138,7 +138,7 @@ export default function Header(props) {
                                                 <Paper className="adminName__popup">
                                                     <ClickAwayListener onClickAway={handleClose}>
                                                         <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
-                                                            <MenuItem onClick={handleClose}>Profile</MenuItem>
+                                                            <Link to="/dashboard"><MenuItem>Dashboard</MenuItem></Link>
                                                             <MenuItem onClick={handleClose}>My account</MenuItem>
                                                             <MenuItem onClick={handleLogout}>Logout</MenuItem>
                                                         </MenuList>

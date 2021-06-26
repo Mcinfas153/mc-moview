@@ -1,0 +1,18 @@
+.databox {
+    border: 1px solid;
+    padding: 20px 20px;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px 1px;
+}
+.databox__title {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+.databox__count {
+    margin: 20px 0;
+    font-size: 26px;
+    font-weight: 700;
+}
