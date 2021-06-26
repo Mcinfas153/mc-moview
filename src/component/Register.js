@@ -67,7 +67,7 @@ export default function Register() {
     }
 
     useEffect(() => {
-        localStorage.getItem('user') && history.push('add-movie')
+        localStorage.getItem('user') && history.push('dashboard')
     }, []);
 
     return (

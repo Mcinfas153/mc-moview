@@ -3,6 +3,7 @@ import Header from './component/Header'
 import Home from './component/Home'
 import Login from './component/Login'
 import Register from './component/Register'
+import Dashboard from './component/Dashboard'
 import AddMovie from './component/AddMovie'
 import UpdateMovie from './component/UpdateMovie'
 import DarkMode from './component/DarkMode'
@@ -25,6 +26,10 @@ function App() {
             <Route path="/register">
               <Header navbar="bg-dark" />
               <Register />
+            </Route>
+            <Route path="/dashboard">
+              <Header navbar="bg-dark" />
+              <Dashboard />
             </Route>
             <Route path="/add-movie">
               <Header navbar="bg-dark" />

@@ -78,7 +78,7 @@ export default function Login(props) {
     }
 
     useEffect(() => {
-        localStorage.getItem('user') && history.push('add-movie')
+        localStorage.getItem('user') && history.push('dashboard')
     }, []);
 
     return (

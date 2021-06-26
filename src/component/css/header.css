@@ -4,6 +4,21 @@
 }
 .nav__links {
     margin-left: 8vw;
+    display: flex;
+    align-items: center;
+}
+.logged__user {
+    margin: 0;
+    color: white;
+}
+.adminName__popup {
+    width: 160px !important;
+    position: absolute !important;
+    top: 5px !important;
+    left: -70px;
+}
+.logout__btn{
+    cursor: pointer;
 }
 .nav__links>a, .nav__linksRight>a {
     color: white !important;
